@@ -1,43 +1,65 @@
-# 🏠 Rent Management System (EasyRentMate)
+# 🏠 EasyRentMate — Rent Management System
 
-This is a MERN stack web application designed to help admins manage shop/store rents for users. Admins can add stores, track monthly rent payments, and mark them as paid. The system also includes role-based access (admin-only login) and an intuitive UI.
+EasyRentMate is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) web application designed to simplify rental management for commercial shops and stores. It provides a robust admin dashboard for managing properties and tenants, alongside a user portal for tenants to view and pay their rent securely.
 
 ---
 
 ## 🔧 Tech Stack
 
-- **Frontend**: React.js, Bootstrap 5
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (Mongoose)
-- **Authentication**: JWT (Admin login only)
-- **Scheduling**: Node Cron Job (for auto rent generation)
+- **Frontend:** React.js, Bootstrap 5, Redux  
+- **Backend:** Node.js, Express.js RESTful API  
+- **Database:** MongoDB (Mongoose ODM)  
+- **Authentication & Authorization:** JWT with role-based access control (RBAC)  
 
 ---
 
 ## 📦 Features
 
-### ✅ Admin Dashboard
-- View all registered shops/users
-- Add a new store with monthly rent
-- Edit or delete any store/user
+### Admin Dashboard
+- View, add, update, and remove shops and tenants  
+- Monitor rent collections and generate financial reports  
+- Manage roles and permissions with RBAC  
+- Manual creation and management of monthly rent records  
 
-### ✅ Rent Management
-- Automatically generate monthly rent at the end of each month using a cron job
-- View rent history of each store
-- Mark monthly rent as "Paid"
-- Filter between Paid and Pending months
+### Rent Management
+- Track rent payment history and status (Paid, Pending, Overdue)  
+- Filter rent records for easy navigation  
+- Mark rent payments as "Paid" or reverse payments manually  
 
-### ✅ Authentication
-- Admin login only
-- Role-based access
-- Secure APIs with JWT middleware
+### Tenant/User Portal
+- Secure login for tenants/shop owners  
+- View detailed rent ledger with payment history and upcoming dues  
+- Online rent payment integration (e.g., Stripe, Razorpay)  
+- Notifications and reminders for due or overdue payments  
+- Downloadable rent receipts and invoices  
+
+### Security
+- Role-based access control to separate admin and user functionalities  
+- JWT-secured API endpoints  
+- Input validation and error handling  
+- Responsive design for mobile and desktop  
 
 ---
 
 ## 🚀 Getting Started
 
-###  Clone the repository
+### Prerequisites
+
+- Node.js v14+  
+- npm or yarn  
+- MongoDB instance (local or cloud)  
+
+### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/rent-management-admin.git
+
+# Navigate to project directory
 cd rent-management-admin
+
+# Install dependencies for backend and frontend
+npm install
+
+# Run the development server
+npm start
